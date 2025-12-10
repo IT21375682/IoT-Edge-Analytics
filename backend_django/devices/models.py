@@ -15,7 +15,9 @@ class Telemetry(models.Model):
     temperature = models.FloatField()
     humidity = models.FloatField()
     cpu_usage = models.FloatField()
+    processed = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True)
+    
 
     def __str__(self):
         return f"Telemetry for {self.device.name} at {self.timestamp}"    
