@@ -9,4 +9,4 @@ class DeviceSerializer(serializers.ModelSerializer):
 class TelemetrySerializer(serializers.ModelSerializer):
     class Meta:
         model = Telemetry
-        fields = ['id', 'device', 'temperature', 'humidity', 'cpu_usage', 'timestamp']       
+        fields = ['id', 'temperature', 'humidity', 'cpu_usage', 'timestamp', 'device', 'processed']    

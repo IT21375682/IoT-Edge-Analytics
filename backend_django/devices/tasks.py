@@ -9,7 +9,7 @@ def process_telemetry_data(telemetry_id):
     telemetry = Telemetry.objects.get(id=telemetry_id)
     # Process the telemetry data here
     
-    if telemetry.temperature >50:
+    if telemetry.temperature > 50:
         print(f"Alert! High temperature recorded: {telemetry.temperature}")
      
     # Mark telemetry as processed
