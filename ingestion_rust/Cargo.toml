@@ -8,4 +8,8 @@ actix-web = "4.0"
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-reqwest = { version = "0.11", features = ["json"] }  # For sending HTTP requests to Django or Celery
+reqwest = { version = "0.11", features = ["json"] }
+gstreamer = "0.17.3"
+gstreamer-video = "0.24.4"
+glib-sys = { version = "0.21.5", default-features = false }  # Disable pkg-config
+gobject-sys = { version = "0.21.5", default-features = false }  # Disable pkg-config

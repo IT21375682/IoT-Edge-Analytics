@@ -124,6 +124,12 @@ USE_TZ = True
 CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Redis as the broker
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
+# settings.py for Celery with multiple queues
+CELERY_TASK_ROUTES = {
+    'devices.tasks.process_telemetry_data': {'queue': 'telemetry_queue'},
+    'devices.tasks.process_video_data': {'queue': 'video_queue'},
+}
+
 
 
 # Static files (CSS, JavaScript, Images)
