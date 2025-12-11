@@ -1,15 +1,18 @@
 # worker/worker.py
 
-from celery import Celery
+import sys
 import os
+from celery import Celery
 
-# Set the default Django settings module for the 'celery' program.
+# Add the backend_django directory to the sys.path
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'backend_django'))
+
+# Ensure that the 'DJANGO_SETTINGS_MODULE' is set correctly
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'visiontrack.settings')
 
-# Create a Celery app instance
 app = Celery('visiontrack')
 
-# Load Celery settings from Django settings.py
+# Load settings from Django settings.py
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
 # Auto-discover tasks in Django apps
