@@ -3,25 +3,6 @@
 
 **VisionTrack** is a system designed for processing telemetry data from IoT devices, integrating multiple technologies such as **Django**, **Rust**, **Celery**, **Redis**, **Postgres**, and **Prometheus/Grafana**. It allows efficient management and visualization of real-time telemetry and IoT data using a scalable architecture.
 
-## Table of Contents
-
-1. [Overview](#overview)
-2. [Technologies](#technologies)
-3. [System Architecture](#system-architecture)
-4. [Setup Instructions](#setup-instructions)
-   - [1. Install Redis and Postgres](#1-install-redis-and-postgres)
-   - [2. Docker Setup](#2-docker-setup)
-   - [3. Django Setup](#3-django-setup)
-   - [4. Celery Setup](#4-celery-setup)
-   - [5. Rust Service Setup](#5-rust-service-setup)
-   - [6. Prometheus and Grafana](#6-prometheus-and-grafana)
-5. [Running the Project](#running-the-project)
-6. [API Endpoints](#api-endpoints)
-7. [Monitoring](#monitoring)
-8. [Contributing](#contributing)
-
----
-
 ## Overview
 
 This project simulates a telemetry pipeline for IoT devices, processing the data using **Rust** for high-performance data ingestion and **Django** for backend services. Telemetry data is managed through **Redis**, tasks are processed asynchronously by **Celery**, and the system is monitored using **Prometheus** and **Grafana**.
