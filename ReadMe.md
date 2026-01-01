@@ -68,25 +68,7 @@ If you are not using Docker for Redis and Postgres, you can install them locally
 
 ---
 
-### 2. Docker Setup
-If you are using Docker to containerize services, ensure that you have **Docker** and **Docker Compose** installed.
-
-- **Start the services** (Postgres, Redis, Prometheus, Grafana) using Docker Compose:
-
-```bash
-cd infra/
-docker-compose up -d
-```
-
-This command will start all the services in the background. You can verify the status by running:
-
-```bash
-docker-compose ps
-```
-
----
-
-### 3. Django Setup
+### 2. Django Setup
 
 1. **Install Dependencies**:
 
@@ -111,7 +93,7 @@ Your Django app will be running at [http://localhost:8000](http://localhost:8000
 
 ---
 
-### 4. Celery Setup
+### 3. Celery Setup
 
 1. **Install Celery Dependencies**:
 
@@ -129,7 +111,7 @@ This will start the Celery worker that listens to the Redis queue for tasks.
 
 ---
 
-### 5. Rust Service Setup
+### 4. Rust Service Setup
 
 1. **Install Rust**: Make sure you have **Rust** installed on your machine. If not, install it from [rust-lang.org](https://www.rust-lang.org/).
 
@@ -144,7 +126,7 @@ This service will begin listening for telemetry data and pushing it into Redis f
 
 ---
 
-### 6. Prometheus and Grafana
+### 5. Prometheus and Grafana
 
 1. **Prometheus Setup**: Prometheus is set up to scrape Redis and other metrics. The configuration is in `infra/prometheus.yml`.
 
